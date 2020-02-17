@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style class="in-text" version="1.0" demote-non-dropping-particle="sort-only" default-locale="en-US" xmlns="http://purl.org/net/xbiblio/csl">
+  <!-- Written with CSL 1.0.1 (https://docs.citationstyles.org/en/1.0.1/specification.html) -->
+  <info>
+    <title>br3ndonland</title>
+    <id>https://github.com/br3ndonland/cite</id>
+    <link href="https://github.com/br3ndonland/cite" rel="self"/>
+    <link href="https://docs.citationstyles.org/en/stable/" rel="documentation"/>
+    <author>
+      <name>Brendon Smith</name>
+      <email>br3ndonland@protonmail.com</email>
+    </author>
+    <category citation-format="numeric"/>
+    <category field="science"/>
+    <summary>This citation style combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, light on punctuation and formatting, and designed for electronic viewing. DOI HTTPS hyperlinks are provided. I would prefer to hyperlink the article title instead of providing a bare URL, but CSL/XML don't allow for hyperlinking. Journal volume and page numbers are no longer relevant and have been removed.</summary>
+    <published>2019-01-03T15:38:19+00:00</published>
+    <updated>2019-01-03T15:38:19+00:00</updated>
+    <rights license="https://choosealicense.com/licenses/mit/">This work is licensed under the MIT License.</rights>
+  </info>
+  <citation collapse="citation-number">
+    <sort>
+      <key variable="citation-number"/>
+    </sort>
+    <layout prefix="[" suffix="]" delimiter=", ">
+      <text variable="citation-number" quotes="false"/>
+    </layout>
+  </citation>
+  <bibliography et-al-min="3" et-al-use-first="1" second-field-align="flush" entry-spacing="0" line-spacing="1">
+    <layout>
+      <text variable="citation-number" suffix="."/>
+      <group delimiter=" ">
+        <text macro="author" suffix="."/>
+        <text macro="title" suffix="."/>
+        <text macro="container-title"/>
+        <text macro="issuance"/>
+        <text macro="URL"/>
+      </group>
+    </layout>
+  </bibliography>
+  <macro name="author">
+    <names variable="author">
+      <name name-as-sort-order="all" sort-separator=" " initialize="true" initialize-with=""/>
+      <et-al font-style="italic"/>
+    </names>
+  </macro>
+  <macro name="title">
+    <text variable="title"/>
+  </macro>
+  <macro name="container-title">
+    <choose>
+      <if type="article-journal">
+        <text variable="container-title" font-style="italic" form="long"/>
+      </if>
+      <else>
+        <text variable="container-title" font-style="italic"/>
+      </else>
+    </choose>
+  </macro>
+  <macro name="issuance">
+    <date prefix="" suffix="." variable="issued">
+      <date-part name="year"/>
+    </date>
+  </macro>
+  <macro name="URL">
+    <choose>
+      <if variable="DOI">
+        <text variable="DOI" prefix="https://doi.org/"/>
+      </if>
+      <else>
+        <text variable="URL"/>
+      </else>
+    </choose>
+  </macro>
+</style>
