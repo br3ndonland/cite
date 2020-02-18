@@ -268,7 +268,9 @@ See _[zotero.md](./zotero.md)_.
 
 ### Sci-Hub
 
-- Russian pirate site at [sci-hub.tw](https://sci-hub.tw) where you can download almost any scientific journal article for free.
+- Russian pirate site that allows users to download almost any scientific journal article for free
+- Formerly at [sci-hub.tw](https://sci-hub.tw)
+- Currently at [sci-hub.zone](https://sci-hub.zone/) and mirrored at [sci-hub.ren](https://sci-hub.ren/), see [Wikipedia](https://en.wikipedia.org/wiki/Sci-Hub) for full list of URLs
 - News coverage
   - [The Atlantic: The research pirates of the dark web](https://www.theatlantic.com/technology/archive/2016/02/the-research-pirates-of-the-dark-web/461829/)
   - [The Guardian: Is the staggeringly profitable business of scientific publishing bad for science?](https://www.theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science)
