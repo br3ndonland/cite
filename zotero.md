@@ -17,6 +17,8 @@ These notes are available in a [public GitHub repository](https://github.com/br3
   - [Citation styles](#citation-styles)
   - [Citing articles](#citing-articles)
 - [Developer resources](#developer-resources)
+  - [Documentation](#documentation)
+  - [JavaScript API](#javascript-api)
 - [TODOs and feature requests](#todos-and-feature-requests)
 
 ## Description
@@ -130,9 +132,17 @@ If you want to format your own style, brace yourself and read on:
 
 ## Developer resources
 
+### Documentation
+
 - [GitHub](https://github.com/zotero/zotero)
 - [Wiki](https://www.zotero.org/support/dev/source_code)
 - [Forum](https://forums.zotero.org/)
+
+### JavaScript API
+
+- [Zotero wiki: Zotero JavaScript API](https://www.zotero.org/support/dev/client_coding/javascript_api)
+- Tools -> Developer -> Run JavaScript
+- See the [script/](script) directory for scripts I use.
 
 ## TODOs and feature requests
 
