@@ -2,15 +2,15 @@
 https://www.zotero.org/support/dev/client_coding/javascript_api#batch_editing
 Tools -> Developer -> Run JavaScript **/
 
-var fieldName = "publicationTitle"
-var oldValue = "Foo"
-var newValue = "Foo2"
+const fieldName = "publicationTitle"
+const oldValue = "Foo"
+const newValue = "Foo2"
 
-var fieldID = Zotero.ItemFields.getID(fieldName)
-var s = new Zotero.Search()
+const fieldID = Zotero.ItemFields.getID(fieldName)
+const s = new Zotero.Search()
 s.libraryID = Zotero.Libraries.userLibraryID
 s.addCondition(fieldName, "is", oldValue)
-var ids = await s.search()
+const ids = await s.search()
 if (!ids.length) {
   return "No items found"
 }
@@ -25,4 +25,4 @@ await Zotero.DB.executeTransaction(async function() {
     await item.save()
   }
 })
-return ids.length + " item(s) updated"
+return `${ids.length} item(s) updated`
