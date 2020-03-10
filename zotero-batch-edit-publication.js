@@ -1,3 +1,7 @@
+/**---------------------------- Zotero batch edits ----------------------------
+https://www.zotero.org/support/dev/client_coding/javascript_api#batch_editing
+Tools -> Developer -> Run JavaScript **/
+
 var fieldName = "publicationTitle"
 var oldValue = "Foo"
 var newValue = "Foo2"
