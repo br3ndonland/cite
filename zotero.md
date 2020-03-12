@@ -144,6 +144,15 @@ If you want to format your own style, brace yourself and read on:
 - Tools -> Developer -> Run JavaScript
 - See the [script/](script) directory for scripts I use.
 
+  - [Batch edit publication titles](script/zotero-batch-edit-publication.js): Mendeley (previous reference manager) did a terrible job with article metadata. One of the issues was that the same journal would sometimes have several titles (_Nature Reviews Molecular Cell Biology, Nature reviews. Molecular cell biology, Nat Rev Mol Cell Biol,_ etc). This script can replace incorrect titles with correct ones.
+
+  - [Batch edit article titles](script/zotero-batch-edit-advanced.js): When I migrated from Mendeley to Zotero, Mendeley inserted awful escaped Greek characters into the title and abstract of many articles:
+    - alpha -> `$\backslashalpha{\{}\backslash{\$}{\}}`
+    - beta -> `$\backslashbeta{\{}\backslash{\$}{\}}`
+    - gamma -> `$\backslashgamma{\{}\backslash{\$}{\}}`
+    - delta -> `$\backslashdelta{\{}\backslash{\$}{\}}`
+    - kappa -> `$\backslashkappa{\{}\backslash{\$}{\}}`
+
 ## TODOs and feature requests
 
 - ~~Batch tagging articles~~
