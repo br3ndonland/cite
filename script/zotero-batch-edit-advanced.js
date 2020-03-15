@@ -25,7 +25,7 @@ const ids = await s.search()
 if (!ids.length) {
   return "No items found"
 }
-await Zotero.DB.executeTransaction(async function() {
+await Zotero.DB.executeTransaction(async () => {
   for (let id of ids) {
     let item = await Zotero.Items.getAsync(id)
     let mappedFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(
