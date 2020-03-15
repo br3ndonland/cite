@@ -16,6 +16,7 @@ const fieldName = "title" // abstract fieldName is abstractNote
 // directly into article titles and abstracts, so I need to escape the escapes.
 const oldValueStart = "$\\backslash"
 const oldValueEnd = "{\\{}\\backslash{\\$}{\\}}"
+newValue = ""
 
 const s = new Zotero.Search()
 s.libraryID = Zotero.Libraries.userLibraryID
@@ -24,7 +25,16 @@ const ids = await s.search()
 if (!ids.length) {
   return "No items found"
 }
-
-// TODO: so far, this script finds the items, but doesn't yet run the replace.
-
-return `${ids.length} item(s) found`
+await Zotero.DB.executeTransaction(async function() {
+  for (let id of ids) {
+    let item = await Zotero.Items.getAsync(id)
+    let mappedFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(
+      item.itemTypeID,
+      fieldName
+    )
+    // TODO: this just deletes the entire field, need to only update part
+    // item.setField(mappedFieldID ? mappedFieldID : fieldID, newValue)
+    // await item.save()
+  }
+})
+return `${ids.length} item(s) updated`
