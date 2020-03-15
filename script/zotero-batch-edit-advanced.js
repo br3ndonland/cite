@@ -21,6 +21,7 @@ newValue = ""
 const s = new Zotero.Search()
 s.libraryID = Zotero.Libraries.userLibraryID
 s.addCondition(fieldName, "contains", oldValueStart || oldValueEnd)
+s.addCondition("itemType", "is", "journalArticle")
 const ids = await s.search()
 if (!ids.length) {
   return "No items found"
