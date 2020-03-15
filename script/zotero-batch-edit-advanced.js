@@ -33,7 +33,7 @@ const escapeStart = "$\\backslash"
 const escapeEnd = "{\\{}\\backslash{\\$}{\\}}"
 const regex = /(\$\\backslash)(.*)({\\{}\\backslash{\\\$}{\\}})(\w)/g
 const replacer = (match, p1, p2, p3, p4, offset, string) => {
-  if (/[b-]/i.test(p4)) {
+  if (/[B-]/.test(p4)) {
     return `${p2}${p4}`
   } else {
     return `${p2} ${p4}`
