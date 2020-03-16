@@ -8,9 +8,14 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 - [Description](#description)
 - [Settings](#settings)
+  - [Zotero settings menu](#zotero-settings-menu)
+  - [ZotFile installation](#zotfile-installation)
+  - [ZotFile preferences](#zotfile-preferences)
 - [Import](#import)
+  - [DOIs](#dois)
   - [Browser](#browser)
-  - [PDFs](#pdfs)
+  - [PDF import](#pdf-import)
+  - [Attaching PDFs with ZotFile](#attaching-pdfs-with-zotfile)
   - [Mendeley](#mendeley)
 - [Viewing and tagging articles](#viewing-and-tagging-articles)
 - [Citations](#citations)
@@ -29,36 +34,94 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 ## Settings
 
-**Set up Zotero before adding articles.**
+**Set up Zotero and ZotFile before adding articles.**
 
-- Zotero settings menu
-  - Uncheck "Automatically take snapshots"
-  - Uncheck "Automatically tag items with keywords and subject headings"
-  - Set [linked file attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory) to location with PDFs (like Google Drive or Dropbox).
-- Auto organize and rename files (like downloaded PDFs) with the [ZotFile plugin](http://zotfile.com/)
-  - [Install ZotFile](http://zotfile.com/#how-to-install--set-up-zotfile):
-    - Download from the website
-    - In Zotero: Tools -> Add-ons -> Install from file
-  - Set up ZotFile preferences in Tools -> ZotFile preferences:
-    - Source folder for attaching new files: leave unchanged
-    - Location of files: add custom file location (your "linked file attachment base directory")
-    - Use subfolders for journal and year (`/%w/%y`)
-    - Renaming rules: uncheck "Use Zotero to Rename" and add file rename rules to your preferences.
-  - **To attach a file:**
-    - Right click or control+click on the file in the Zotero window
-    - Add attachment -> Attach link to file. This will link the file, but not move it yet.
-    - Right click or control+click again
-    - Manage attachments -> Rename file. This will move and rename the file.
+### Zotero settings menu
+
+#### General pane
+
+- File handling
+  - [ ] Automatically take snapshots
+  - [ ] Automatically attach associated PDFs
+  - [x] Automatically retrieve metadata for PDFs
+  - [ ] Automatically tag items with keywords and subject headings
+- Miscellaneous
+  - [ ] Automatically rename attachment files using parent metadata (this will be managed by ZotFile)
+
+#### Sync pane
+
+- Data syncing
+  - [ ] Sync automatically
+  - [x] Sync full-text content
+- File syncing
+  - [ ] Sync attachment files in my library
+  - [ ] Sync attachment files in group libraries
+
+#### Advanced pane
+
+- Files and folders
+  - [Linked attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory): file path to folder with PDFs. If you set this to a folder you use with cloud storage, Zotero will be able to access files on all your computers.
+
+### ZotFile installation
+
+- The [ZotFile plugin](http://zotfile.com/) helps organize and rename files (like downloaded PDFs).
+- [ZotFile installation](http://zotfile.com/#how-to-install--set-up-zotfile):
+  - Download from the website
+  - In Zotero: Tools -> Add-ons -> Install from file
+
+### ZotFile preferences
+
+Tools -> ZotFile preferences
+
+#### General settings pane
+
+- Source folder for attaching new files: leave unchanged
+- Location of files:
+  - [x] Custom location: add your "linked attachment base directory"
+  - [x] Use subfolder defined by: `/%w/%y`
+
+#### Renaming rules pane
+
+- Renaming format:
+  - [ ] Use Zotero to rename
+  - Format: `{%a_}{%y_}{%t}`
+- Additional Settings
+  - Delimiter between multiple authors: `_` (underscore)
+  - [ ] Add user input to filename
+  - [x] Change to lower case
+  - [x] Replace blanks
+  - [x] Truncate title after `.` or `:` or `?`
+  - [x] Maximum length of title: `80`
+  - [x] Maximum number of authors: `3`
+  - [x] Number of authors to display when authors are omitted: `1`
+  - [x] Add suffix when authors are omitted: `_et_al`
 
 ## Import
+
+### DOIs
+
+The best way to import new articles is by pasting the DOI into the magic wand box in the toolbar. It will automatically download PDFs if available.
 
 ### Browser
 
 The browser extension is fast and effective. When browsing a webpage with an article you want to add, simply click the Zotero browser icon. It helps to have Zotero running beforehand.
 
-### PDFs
+### PDF import
 
-It's a little difficult to import from pre-downloaded PDFs. The best solution is to paste the DOI into the magic wand box above the article pane.
+- [Retrieving PDF metadata](https://www.zotero.org/support/retrieve_pdf_metadata) is not Zotero's strongest feature.
+- If you have a folder full of PDFs to import:
+  - Navigate to the add new item toolbar button (green plus sign) -> Link to File.
+  - Select all the PDFs when they appear in the Zotero window
+  - Right click -> Retrieve Metadata for PDFs
+
+### Attaching PDFs with ZotFile
+
+To attach a file (such as a PDF) to an article entry in Zotero:
+
+- Right click or control+click on the article entry in the Zotero window
+- Add attachment -> Attach link to file. This will link the file, but not move it yet.
+- Right click or control+click again
+- Manage attachments -> Rename file. ZotFile will move and rename the file.
 
 ### Mendeley
 
