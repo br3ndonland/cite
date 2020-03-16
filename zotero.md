@@ -155,9 +155,9 @@ If you want to format your own style, brace yourself and read on:
 
 ## TODOs and feature requests
 
-- ~~Batch tagging articles~~
-- ~~eLife articles are coming through as webpages. Any eLife page with an articles URI like `https://elifesciences.org/articles/{ID}` should be saved by Zotero as a journal article.~~
-- Nested tags
-- Could use a switchable sidebar for authors and journals like Mendeley has.
-- Set [linked file attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory) per-library. Want each library in its own folder.
-- Settings sync
+- [x] Batch tagging articles -> select articles in the Zotero window, drag onto tags in the sidebar.
+- [x] eLife articles are coming through as webpages. Any eLife page with an articles URI like `https://elifesciences.org/articles/{ID}` should be saved by Zotero as a journal article.
+- [ ] Nested tags
+- [ ] Switchable sidebar for authors and journals like Mendeley has.
+- [ ] Set [linked file attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory) per-library. Want each library in its own folder.
+- [ ] Settings sync
