@@ -93,7 +93,7 @@ Zotero has Mendeley import, but **Zotero can only import from Mendeley 1.18 or o
 
 ## Viewing and tagging articles
 
-- There is no way to include nested tags (subtags). I compromise by putting a dash in each tag to indicate a subtag, and adding the higher-level tag manually. For example, for an article about fasting (a sub-field of metabolism), I would tag the article with `metabolism` and `metabolism/fasting`.
+- There is no way to include nested tags (subtags). I compromise by putting a forward slash in each tag to indicate a subtag, and adding the higher-level tag manually. For example, for an article about fasting (a sub-field of metabolism), I would tag the article with `metabolism` and `metabolism/fasting`.
 - **I tag each article with the type of article, the topics, and the methods used.**
   - Type: `article/primary/basic`, `article/review`, etc
   - Topics: `cell/er`, `metabolism/fasting`, etc
