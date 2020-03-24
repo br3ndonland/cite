@@ -44,9 +44,9 @@ These notes are available in a [public GitHub repository](https://github.com/br3
   - [ ] Automatically take snapshots
   - [ ] Automatically attach associated PDFs
   - [x] Automatically retrieve metadata for PDFs
-  - [ ] Automatically tag items with keywords and subject headings
-- Miscellaneous
   - [ ] Automatically rename attachment files using parent metadata (this will be managed by ZotFile)
+- Miscellaneous
+  - [ ] Automatically tag items with keywords and subject headings
 
 #### Sync pane
 
