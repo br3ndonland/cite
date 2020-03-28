@@ -4,7 +4,7 @@ Tools -> Developer -> Run JavaScript
 Mendeley (previous reference manager) did a terrible job with article metadata.
 One of the issues was that the same journal would sometimes have several titles:
 - Nature Reviews Molecular Cell Biology
-- Nature reviews. Molecular cell biology,
+- Nature reviews. Molecular cell biology
 - Nat Rev Mol Cell Biol
 This script can replace incorrect titles with correct ones.
 **/
