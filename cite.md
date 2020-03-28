@@ -226,7 +226,7 @@ Cons
 
 ### Web annotations
 
-- [hypothes.is](https://web.hypothes.is/): Used by eLife. See Enabling scientific discussion on eLife with Hypothesis.
+- [hypothes.is](https://web.hypothes.is/): Used by eLife. See the eLife Labs blog post "[Enabling scientific discussion on eLife with Hypothesis](https://elifesciences.org/labs/3f85f8c2/enabling-scientific-discussion-on-elife-with-hypothesis)."
 - [Remarq](https://www.redlink.com/remarq-2/): Another commenting engine.
 
 ### Zotero
