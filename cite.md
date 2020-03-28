@@ -33,7 +33,7 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 ### CSL
 
-My personal citation style is available in [this public GitHub Gist](https://gist.github.com/br3ndonland/166dd2f566c50ba050924061df066731). This citation style combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, light on punctuation and formatting, and designed for electronic viewing. DOI HTTPS hyperlinks are provided. I would prefer to hyperlink the article title instead of providing a bare URL, but CSL/XML don't allow for hyperlinking. Journal volume and page numbers are no longer relevant and have been removed. In addition to the style specifications, I use sentence case for article titles and title case for journal titles.
+My personal citation style is available in [this GitHub repo](./br3ndonland.csl). This citation style combines aspects of the Nature and BioMed Central (BMC) styles. The style is concise yet informative, light on punctuation and formatting, and designed for electronic viewing. DOI HTTPS hyperlinks are provided. I would prefer to hyperlink the article title instead of providing a bare URL, but CSL/XML don't allow for hyperlinking. Journal volume and page numbers are no longer relevant and have been removed. In addition to the style specifications, I use sentence case for article titles and title case for journal titles.
 
 You can download the style and import it into Zotero in File -> Preferences -> Cite, then click + and find the downloaded file.
 
@@ -124,7 +124,7 @@ Cons
   - Deleting an article does not delete the associated PDF.
   - PDF viewer is totally inferior to Preview
 - Export
-  - Be sure to **enable BibTeX syncing** for export. Don't rely on the database. Mendeley started encrypting the database, making it [difficult to import with Zotero](https://www.zotero.org/support/kb/mendeley_import). See _zotero.md_, in a [public GitHub Gist](https://gist.github.com/br3ndonland/543dbbd5f9b3e1fc7c19e1729d5f7fb9).
+  - Be sure to **enable BibTeX syncing** for export. Don't rely on the database. Mendeley started encrypting the database, making it [difficult to import with Zotero](https://www.zotero.org/support/kb/mendeley_import). See _[zotero.md](./zotero.md)_.
   - Mendeley to EndNote: Export RIS.
 - Backing up and restoring Mendeley:
   - Make sure BibTeX syncing is enabled in Preferences -> BibTeX.
