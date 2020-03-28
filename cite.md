@@ -206,8 +206,8 @@ Cons
 
 - [ScienceFair](https://sciencefair-app.com/) is like eLife Desktop.
 - Uses eLife's [Lens reader](https://github.com/elifesciences/lens), which renders JATS-XML.
-- Decentralized p2p system built on the [dat protocol](https://dat.foundation/). Should integrate with [Sci-Hub](http://sci-hub.tw/)!
-- Currently only has eLife as a datasource, and even that didn't work when I tried it. Still, it looks like a promising project.
+- Decentralized p2p system built on the [dat protocol](https://dat.foundation/).
+- Originally only had eLife as a data source, but now integrates multiple data sources.
 
 ### Sente
 
