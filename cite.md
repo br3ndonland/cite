@@ -268,14 +268,12 @@ See _[zotero.md](./zotero.md)_.
 ### Sci-Hub
 
 - Russian pirate site that allows users to download almost any scientific journal article for free
-- Formerly at [sci-hub.tw](https://sci-hub.tw)
-- Currently at [sci-hub.zone](https://sci-hub.zone/) and mirrored at [sci-hub.ren](https://sci-hub.ren/), see [Wikipedia](https://en.wikipedia.org/wiki/Sci-Hub) for full list of URLs
+- Formerly at [sci-hub.tw](https://sci-hub.tw), currently at [sci-hub.zone](https://sci-hub.zone/) and mirrored at [sci-hub.ren](https://sci-hub.ren/), see [Wikipedia](https://en.wikipedia.org/wiki/Sci-Hub) for full list of URLs
 - News coverage
   - [The Atlantic: The research pirates of the dark web](https://www.theatlantic.com/technology/archive/2016/02/the-research-pirates-of-the-dark-web/461829/)
   - [The Guardian: Is the staggeringly profitable business of scientific publishing bad for science?](https://www.theguardian.com/science/2017/jun/27/profitable-business-scientific-publishing-bad-for-science)
   - [The Verge: Meet the pirate queen making academic papers free online](https://www.theverge.com/2018/2/8/16985666/alexandra-elbakyan-sci-hub-open-access-science-papers-lawsuit)
 - The [Greene lab at Penn](http://www.greenelab.com/) published an [analysis of Sci-Hub](https://elifesciences.org/articles/32822).
-- Why don’t they make sci-hub decentralized? Could combine it with [ScienceFair](https://sciencefair-app.com/).
 
 ### Semantic Scholar
 
