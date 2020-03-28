@@ -11,10 +11,8 @@ These notes are available in a [public GitHub repository](https://github.com/br3
   - [EndNote](#endnote)
   - [knitcitations](#knitcitations)
   - [Mendeley](#mendeley)
-  - [Papers](#papers)
   - [PubSweet](#pubsweet)
-  - [ReadCube](#readcube)
-  - [ReadCube Dimensions](#readcube-dimensions)
+  - [ReadCube Papers](#readcube-papers)
   - [RefWorks](#refworks)
   - [ScienceFair](#sciencefair)
   - [Sente](#sente)
@@ -138,51 +136,42 @@ Cons
   - Import the BibTeX file with Mendeley.
 - **Owned by publishing magnate Elsevier.**
 
-### Papers
-
-Cons
-
-- **Papers calls tags "keywords." This is a fatal flaw, because articles also contain keywords embedded in the metadata.** Metadata keywords are mixed together with custom keywords.
-- You can only view one keyword at a time, unlike in Mendeley. This is another fatal flaw.
-- Papers does not offer a built-in option for custom citation styles. Have to use the generic CSL editor at citationstyles.org, save the citation file to disk, and import. I would expect more from a paid program.
-
 ### PubSweet
 
 - From Adam Hyde at Coko Foundation. See [Adam Hyde's post on xPub](https://www.adamhyde.net/what-is-xpub/).
 - Coko Foundation's code is on [GitLab](https://gitlab.coko.foundation). It's poorly documented, not surprising considering Adam Hyde's [disdain for Markdown](https://www.adamhyde.net/whats-wrong-with-markdown/).
 
-### ReadCube
+### ReadCube Papers
 
-- Info
-  - ReadCube is a reference manager and online PDF viewer. It is integrated into the websites of many journals, making it easy to add articles.
-  - Owned by [Digital Science](https://www.digital-science.com/), a venture capital firm which also owns Altmetric, Labguru, Papers, Symplectic, and TetraScience.
+- Background info
+  - ReadCube is a reference manager and online PDF viewer. It is integrated into the websites of many journals, making it easy to add articles. It is backed by [Digital Science](https://www.digital-science.com/), a venture capital firm which also owns Altmetric, Labguru, Papers, Symplectic, and TetraScience.
+  - [Papers](https://www.papersapp.com/) is a desktop app that was acquired by ReadCube. See [their blog post announcement](https://www.papersapp.com/glimpse-into-the-new-readcube-papers-app/) for more details.
+- Subscription
   - **Pushes users toward the subscription service.**
-  - Premium account with unlimited cloud storage ~~\$50~~ \$55/year (price is going up).
-- [Import](https://readcubesupport.freshdesk.com/support/solutions/articles/30000026491-how-do-i-import-from-my-library-from-another-reference-manager-into-readcube-endnote-sente-mendel)
-  - **Does not import Mendeley tags.**
-  - AI discovery features
-    - It provides recommended articles, but they cannot be organized by publication date or journal.
-- Tagging
+  - Premium account with unlimited cloud storage ~~\$50~~ ~~\$55~~ \$60 per year (price is going up).
+- Import available from other reference managers
+  - **Doesn't have features for library export.** They're trying to lock you in to a subscription.
+- AI discovery features
+  - _TODO: I need to check on this in the latest ReadCube Papers app._
+  - Dimensions is an AI discovery platform integrated with ReadCube.
+    - [Dimensions website](https://www.dimensions.ai/)
+    - [Dimensions web app](https://app.dimensions.ai/)
+    - [Dimensions info page](https://www.digital-science.com/products/dimensions/)
+  - It provides recommended articles, but they cannot be organized by publication date or journal.
+- Tagging and keywords
+  - _TODO: I need to check on this in the latest ReadCube Papers app._
+  - **Papers calls tags "keywords." This is a fatal flaw, because articles also contain keywords embedded in the metadata.** Metadata keywords are mixed together with custom keywords.
   - **Tagging is premium-only.**
-- Viewing
+  - **Does not import Mendeley tags.**
   - **Can only view one tag at a time like Papers. Fatal flaw.**
+- Viewing
+  - _TODO: I need to check on this in the latest ReadCube Papers app._
   - Can’t view by journal?
   - Hierarchical folders are not implied (so items in a subfolder do not automatically show up in the parent folder).
 - Citing
-  - It has its own SmartCite citation engine.
-- Export
-  - Can [export citations](https://readcubesupport.freshdesk.com/support/solutions/articles/30000024634-how-can-i-export-references-from-readcube-).
-  - **Doesn't have features for library export.** They're trying to lock you in to a subscription.
-- Discovering
+  - ReadCube Papers now offers custom citation styles.
 - Collaborating
-  - **Excellent [team features](https://www.readcube.com/teams).**
-
-### ReadCube Dimensions
-
-- Dimensions is an AI discovery platform integrated with ReadCube.
-  - [Dimensions website](https://www.dimensions.ai/)
-  - [Dimensions web app](https://app.dimensions.ai/)
-  - [Dimensions info page](https://www.digital-science.com/products/dimensions/)
+  - **Excellent [team features](https://www.papersapp.com/features/).**
 
 ### RefWorks
 
