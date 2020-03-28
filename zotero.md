@@ -42,9 +42,9 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 - File handling
   - [ ] Automatically take snapshots
-  - [ ] Automatically attach associated PDFs
+  - [x] Automatically attach associated PDFs and other files when saving items _(this will automatically download PDFs when available)_
   - [x] Automatically retrieve metadata for PDFs
-  - [ ] Automatically rename attachment files using parent metadata (this will be managed by ZotFile)
+  - [ ] Automatically rename attachment files using parent metadata _(this will be managed by ZotFile)_
 - Miscellaneous
   - [ ] Automatically tag items with keywords and subject headings
 
