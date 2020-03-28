@@ -255,8 +255,7 @@ See _[zotero.md](./zotero.md)_.
 
 ### meta
 
-- [Meta](https://www.meta.org/) is an AI platform acquired by Chan Zuckerberg initiative (czi).
-- It's sort of like a feed aggregator for science journals.
+- [Meta](https://www.meta.org/) is an AI feed aggregator for science journals.
 - Was originally an independent company, then it was acquired by czi. It took them years to re-release the software, and yet it's still in beta as of 2020.
 
 ### PubMed
