@@ -19,6 +19,7 @@ These notes are available in a [public GitHub repository](https://github.com/br3
   - [Web annotations](#web-annotations)
   - [Zotero](#zotero)
 - [Document interconversion](#document-interconversion)
+  - [Highlights](#highlights)
   - [Pandoc](#pandoc)
 - [Literature databases](#literature-databases)
   - [meta](#meta)
@@ -223,6 +224,13 @@ Cons
 See _[zotero.md](./zotero.md)_.
 
 ## Document interconversion
+
+### Highlights
+
+[Highlights](https://highlightsapp.net) is a macOS app for managing and exporting PDF annotations.
+
+- Notes app integrations: Exports annotations to Bear, Ulysses, and other popular apps.
+- Reference manager integrations: Exports to Papers (the old one, not the ReadCube-owned one), but not Zotero
 
 ### Pandoc
 
