@@ -25,6 +25,7 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 - [Citations](#citations)
   - [Citation styles](#citation-styles)
   - [Citing articles](#citing-articles)
+- [Backups](#backups)
 - [Developer resources](#developer-resources)
   - [Documentation](#documentation)
   - [JavaScript API](#javascript-api)
@@ -292,6 +293,20 @@ If you want to format your own style, brace yourself and read on:
   - Select citations in Zotero
   - Right click -> Copy to Clipboard
   - Paste where desired
+
+## Backups
+
+Locate the [Zotero data directory](https://www.zotero.org/support/zotero_data) _(Settings -> Advanced -> Show Data Directory.)_
+
+Create a compressed archive of the Zotero data directory, excluding any `.bak` database backups, and save to the desired output directory. This example uses [GNU `tar`](https://www.gnu.org/software/tar/manual/tar.html). Other archive utilities can be used instead if preferred.
+
+```sh
+input_directory="$HOME/Zotero" \
+  output_directory="/path/to/backups" \
+  output_filename="Zotero-$(date -u "+%Y-%m-%d").tar.gz"
+
+tar --directory="$input_directory" --exclude='*.bak' --exclude='.DS_Store' -czf "$output_directory/$output_filename" './'
+```
 
 ## Developer resources
 
