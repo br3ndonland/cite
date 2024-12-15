@@ -7,6 +7,7 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 ## Table of Contents <!-- omit in toc -->
 
 - [Description](#description)
+- [Installation](#installation)
 - [Settings](#settings)
   - [General pane](#general-pane)
   - [Sync pane](#sync-pane)
@@ -34,6 +35,11 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 - [Zotero](https://www.zotero.org/) is a non-profit project that provides citation manager software.
 - The Zotero native app is available on Mac, Windows, and Linux.
 - [ZoteroBib](https://zbib.org/) is a lightweight citation manager for use in the browser.
+
+## Installation
+
+- Zotero can be installed by [direct download](https://www.zotero.org/download/).
+- Zotero can also be installed as a [Homebrew Cask](https://formulae.brew.sh/cask/zotero): `brew install --cask zotero`
 
 ## Settings
 
