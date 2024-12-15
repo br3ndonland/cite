@@ -8,14 +8,17 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 - [Description](#description)
 - [Settings](#settings)
-  - [Zotero settings menu](#zotero-settings-menu)
-  - [ZotFile installation](#zotfile-installation)
-  - [ZotFile preferences](#zotfile-preferences)
+  - [General pane](#general-pane)
+  - [Sync pane](#sync-pane)
+  - [Advanced pane](#advanced-pane)
+- [Plugins](#plugins)
+  - [General](#general)
+  - [ZotMoov](#zotmoov)
+  - [ZotFile](#zotfile)
 - [Import](#import)
   - [DOIs](#dois)
   - [Browser](#browser)
   - [PDF import](#pdf-import)
-  - [Attaching PDFs with ZotFile](#attaching-pdfs-with-zotfile)
   - [Mendeley](#mendeley)
 - [Viewing and tagging articles](#viewing-and-tagging-articles)
 - [Citations](#citations)
@@ -34,67 +37,167 @@ These notes are available in a [public GitHub repository](https://github.com/br3
 
 ## Settings
 
-**Set up Zotero and ZotFile before adding articles.**
+**Set up Zotero and [ZotMoov](#zotmoov) before adding articles.**
 
-### Zotero settings menu
+### General pane
 
-#### General pane
+#### File Handling
 
-- File handling
-  - [ ] Automatically take snapshots
-  - [x] Automatically attach associated PDFs and other files when saving items _(this will automatically download PDFs when available)_
-  - [x] Automatically retrieve metadata for PDFs
-  - [ ] Automatically rename attachment files using parent metadata _(this will be managed by ZotFile)_
-- Miscellaneous
-  - [ ] Automatically tag items with keywords and subject headings
+- [x] Automatically attach associated PDFs and other files when saving items _(if this box is checked, Zotero will automatically download PDFs when available)_
+- [x] Automatically retrieve metadata for PDFs and ebooks
+- [ ] Automatically take snapshots when creating items from webpages _(if this box is checked, Zotero will store a local copy of the webpage)_
 
-#### Sync pane
+#### [File Renaming](https://www.zotero.org/support/file_renaming)
 
-- Data syncing
-  - [ ] Sync automatically
-  - [x] Sync full-text content
-- File syncing
-  - [ ] Sync attachment files in my library
-  - [ ] Sync attachment files in group libraries
+- [x] Automatically rename locally added files
+  - [x] PDF
+  - [x] Ebook
+  - [x] Image
+  - [x] Audio
+  - [x] Video
+  - [x] Rename linked files
 
-#### Advanced pane
+Default format template for renaming linked files:
+
+```
+{{ firstCreator suffix=" - " }}{{ year suffix=" - " }}{{ title truncate="100" }}
+```
+
+Custom format template for renaming linked files:
+
+```
+{{ if {{ authors }} == {{ authors max="3" }} }}
+{{ authors case="snake" join="_" name="family" suffix="_" }}
+{{ else }}
+{{ authors case="snake" join="_" max="1" name="family" suffix="_et_al_" }}
+{{ endif }}
+{{ year suffix="_" }}
+{{ title case="snake" replaceFrom="(.*)([\.:?!]| - )(.*)" replaceTo="$1" truncate="80" }}
+```
+
+This custom format template attempts to match the previous [ZotFile setting](#zotfile-settings). Notes:
+
+- General
+  - The format template is sensitive to spaces between template fields, but is not sensitive to newlines (linebreaks/linefeeds).
+  - See the [Zotero test suite](https://github.com/zotero/zotero/blob/e80b5787fe13a093011264d9ccc3f0533a660cfc/test/tests/attachmentsTest.js#L1434) for examples.
+- Authors
+  - Zotero supports multiple variables for referencing authors, including `authors` and `firstCreator`. Note that the value of `firstCreator` is actually the _first two authors_, and the `et al.` format for when there are three or more authors is not easily configurable (though it can be changed with `replaceFrom` and `replaceTo` as suggested in the [Zotero forums](https://forums.zotero.org/discussion/comment/472407)).
+  - See the [Zotero forums](https://forums.zotero.org/discussion/117442/filename-renaming-with-multiple-authors) for more suggestions.
+- Title
+  - `title case="snake"` lowercases all words and separates each word with `_`.
+  - The `replaceFrom` and `replaceTo` fields seen in the custom format template will automatically truncate the title at characters like `:`. This is similar to the behavior of the ZotFile setting "Truncate title after `.` or `:` or `?`" ([source code](https://github.com/jlegewie/zotfile/blob/7b2c98b5a08ddfcfdcc99f6d3fa1a8aff776eb01/chrome/content/zotfile/wildcards.js#L66-L69)).
+  - The behavior of the `truncate` field is slightly different from how ZotFile truncated titles. Zotero will truncate at the given limit, regardless of the final character in the title. ZotFile actually truncated at _the last word before the character limit_ due to a non-configurable `truncate_smart` setting ([source code](https://github.com/jlegewie/zotfile/blob/7b2c98b5a08ddfcfdcc99f6d3fa1a8aff776eb01/chrome/content/zotfile/wildcards.js#L79-L83)).
+
+#### Miscellaneous
+
+- [ ] Automatically tag items with keywords and subject headings _(if this box is checked, note that keywords and subject headings are not standardized and will be messy)_
+
+### Sync pane
+
+#### Data syncing
+
+- [ ] Sync automatically
+- [x] Sync full-text content
+
+#### File syncing
+
+- [ ] Sync attachment files in my library
+- [ ] Sync attachment files in group libraries
+
+### Advanced pane
 
 - Files and folders
   - [Linked attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory): file path to folder with PDFs. If you set this to a folder you use with cloud storage, Zotero will be able to access files on all your computers.
 
-### ZotFile installation
+## Plugins
 
-- The [ZotFile plugin](http://zotfile.com/) helps organize and rename files (like downloaded PDFs).
-- [ZotFile installation](http://zotfile.com/#how-to-install--set-up-zotfile):
-  - Download from the website
-  - In Zotero: Tools -> Add-ons -> Install from file
+### General
 
-### ZotFile preferences
+Note that the [Zotero plugins directory](https://www.zotero.org/support/plugins) is usually outdated. It is usually more effective to [search GitHub](https://github.com/search?q=zotero+plugin&type=repositories) and download `.xpi` plugin files.
 
-Tools -> ZotFile preferences
+After downloading the desired `.xpi` file, install it by navigating to Tools -> Plugins, then clicking the gear icon (⚙), then "Install Plugin From File."
 
-#### General settings pane
+### ZotMoov
 
-- Source folder for attaching new files: leave unchanged
-- Location of files:
-  - [x] Custom location: add your "linked attachment base directory"
-  - [x] Use subfolder defined by: `/%w/%y`
+#### ZotMoov intro
 
-#### Renaming rules pane
+[ZotMoov](https://github.com/wileyyugioh/zotmoov) helps automatically move and organize file attachments when they are added to a Zotero library.
 
-- Renaming format:
-  - [ ] Use Zotero to rename
-  - Format: `{%a_}{%y_}{%t}`
-- Additional Settings
-  - Delimiter between multiple authors: `_` (underscore)
-  - [ ] Add user input to filename
-  - [x] Change to lower case
-  - [x] Replace blanks
-  - [x] Truncate title after `.` or `:` or `?`
-  - [x] Maximum length of title: `80`
-  - [x] Maximum number of authors: `3`
-  - [x] Number of authors to display when authors are omitted: `1`
-  - [x] Add suffix when authors are omitted: `_et_al`
+#### ZotMoov settings
+
+_Zotero Settings -> ZotMoov_
+
+Directory to Move/Copy Files To: _set to same directory as "[linked attachment base directory](https://www.zotero.org/support/preferences/advanced#linked_attachment_base_directory)"_
+
+Other Settings
+
+- File Behavior: `Move`
+- [x] Automatically Move/Copy Files When Added
+- [x] Automatically Move/Copy Files to Subdirectory
+  - [Subdirectory String](https://github.com/wileyyugioh/zotmoov/blob/master/docs/WILDCARD_INFO.md): `/{%w}/{%y}`
+- [x] Automatically Delete External Linked Files in the ZotMoov Directory
+
+Allowed File Extensions
+
+- Defaults
+  - [`djvu`](https://en.wikipedia.org/wiki/DjVu)
+  - `docx`
+  - `epub`
+  - `pdf`
+- Custom
+  - `aac`
+  - `jpeg`
+  - `jpg`
+  - `m4a`
+  - `m4v`
+  - `mkv`
+  - `mp3`
+  - `mp4`
+  - `png`
+- Wildcards do not appear to be supported, so for JPEG files for example, `jpeg` and `jpg` may need to both be added.
+
+#### Migrating from ZotFile
+
+[ZotFile](#zotfile) is not compatible with Zotero 7 ([jlegewie/zotfile#655](https://github.com/jlegewie/zotfile/issues/655)). [ZotMoov](#zotmoov) can be used instead.
+
+The [ZotMoov README FAQ](https://github.com/wileyyugioh/zotmoov?tab=readme-ov-file#faq) provides some notes for migrating from ZotFile. Additionally, note that ZotMoov does not have its own file renaming rules like ZotFile did. The [new file renaming rules introduced in Zotero 7](#general-pane) can be used instead.
+
+### ZotFile
+
+#### ZotFile intro
+
+The [ZotFile plugin](http://zotfile.com/) helped organize and rename files (like downloaded PDFs).
+
+**UPDATE:** ZotFile is not compatible with Zotero 7 ([jlegewie/zotfile#655](https://github.com/jlegewie/zotfile/issues/655)). [ZotMoov](#zotmoov) can be used instead.
+
+#### ZotFile settings
+
+_Tools -> ZotFile preferences_
+
+- General settings pane
+  - Source folder for attaching new files: leave unchanged
+  - Location of files:
+    - [x] Custom location: add your "linked attachment base directory"
+    - [x] Use subfolder defined by: `/%w/%y`
+- Renaming rules pane
+  - Renaming format:
+    - [ ] Use Zotero to rename
+    - Format: `{%a_}{%y_}{%t}`
+  - Additional Settings
+    - Delimiter between multiple authors: `_` (underscore)
+    - [ ] Add user input to filename
+    - [x] Change to lower case
+    - [x] Replace blanks
+    - [x] Truncate title after `.` or `:` or `?`
+    - [x] Maximum length of title: `80` (ZotFile actually truncated the title to the length before the last space)
+    - [x] Maximum number of authors: `3`
+    - [x] Number of authors to display when authors are omitted: `1`
+    - [x] Add suffix when authors are omitted: `_et_al`
+- Attaching PDFs with ZotFile - To attach a file (such as a PDF) to an article entry in Zotero:
+  - Right click or control+click on the article entry in the Zotero window
+  - Add attachment -> Attach link to file. This will link the file, but not move it yet.
+  - Right click or control+click again
+  - Manage attachments -> Rename file. ZotFile will move and rename the file.
 
 ## Import
 
@@ -113,15 +216,6 @@ The browser extension is fast and effective. When browsing a webpage with an art
   - Navigate to the add new item toolbar button (green plus sign) -> Link to File.
   - Select all the PDFs when they appear in the Zotero window
   - Right click -> Retrieve Metadata for PDFs
-
-### Attaching PDFs with ZotFile
-
-To attach a file (such as a PDF) to an article entry in Zotero:
-
-- Right click or control+click on the article entry in the Zotero window
-- Add attachment -> Attach link to file. This will link the file, but not move it yet.
-- Right click or control+click again
-- Manage attachments -> Rename file. ZotFile will move and rename the file.
 
 ### Mendeley
 
